@@ -1,13 +1,16 @@
-# DELETE THIS FILE
+from django.db import migrations
 
-# This file is causing issues because the ventas app doesn't have any migrations yet.
-# You cannot create a migration that depends on 'XXXX_initial' when there are no
-# existing migrations in the app.
+class Migration(migrations.Migration):
+    """
+    This is a proper migration class to fix the BadMigrationError.
+    Initially we wanted to delete this file, but since it's still present,
+    we're making it a valid empty migration instead.
+    """
+    # We need a proper dependency - if there are no migrations yet, 
+    # make this the initial migration
+    dependencies = [('ventas', '0001_initial')]
 
-# Instead, you should:
-# 1. Delete this file
-# 2. Create initial migrations for the ventas app with:
-#    python manage.py makemigrations ventas
-
-# After that, if the Usuario model was in your models.py but has now been removed,
-# Django will automatically create a proper migration to remove it.
+    operations = [
+        # Empty operations - this is just a placeholder migration
+        # that won't affect the database
+    ]

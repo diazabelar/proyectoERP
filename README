@@ -1,0 +1,41 @@
+# Instructions to start the Django server
+
+0.  Navigate to the project directory:
+
+```bash
+cd proyectoERP
+```
+
+1.  Create a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+2.  Activate the virtual environment:
+
+```bash
+source venv/bin/activate
+```
+
+3.  Install build tools and MySQL client dependencies (required before installing requirements):
+
+```bash
+sudo apt-get update
+sudo apt-get install build-essential pkg-config libmariadb-dev python3-dev
+```
+
+4.  Install requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+
+
+```bash
+python manage.py runserver
+```
+
+
+

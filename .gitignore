@@ -54,4 +54,5 @@ proyecto_erp/settings_local.py
 **/*_key.json
 **/*.pem
 **/*.keyadmingithub.txt
-wifi.txt
+notas
+
